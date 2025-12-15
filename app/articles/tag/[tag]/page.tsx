@@ -60,7 +60,7 @@ export default async function TagPage({ params }: TagPageProps) {
   const queryTag = toQueryFormat(tag)
   const displayName = toDisplayName(tag)
 
-  const articles = await client.fetch(tagQuery, { tag: queryTag })
+  const articles = await client.fetch(tagQuery, { tag: queryTag } as Record<string, string>)
 
   if (!articles || articles.length === 0) {
     notFound()
