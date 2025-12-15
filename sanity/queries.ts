@@ -1,5 +1,7 @@
-// Get all HOSPITALITY.FYI articles
-export const allArticlesQuery = `
+import { groq } from 'next-sanity'
+
+// All articles for homepage and collection
+export const allArticlesQuery = groq`
   *[_type == "article" && category == "hospitality" && "hospitality" in sites] | order(publishedAt desc) {
     _id,
     title,
@@ -16,14 +18,13 @@ export const allArticlesQuery = `
     category,
     tags,
     publishedAt,
-    author,
-    "excerpt": body[0].children[0].text
+    author
   }
 `
 
-// Get single article by slug
-export const articleBySlugQuery = `
-  *[_type == "article" && slug.current == $slug][0] {
+// Single article by slug
+export const articleBySlugQuery = groq`
+  *[_type == "article" && slug.current == $slug && category == "hospitality" && "hospitality" in sites][0] {
     _id,
     title,
     subtitle,
@@ -35,26 +36,17 @@ export const articleBySlugQuery = `
       },
       alt
     },
+    body,
     subcategory,
     category,
     tags,
-    body[] {
-      ...,
-      _type == "image" => {
-        ...,
-        asset -> {
-          _id,
-          url
-        }
-      }
-    },
     publishedAt,
     author
   }
 `
 
-// Get articles by subcategory
-export const articlesBySubcategoryQuery = `
+// Articles by subcategory
+export const articlesBySubcategoryQuery = groq`
   *[_type == "article" && category == "hospitality" && "hospitality" in sites && subcategory == $subcategory] | order(publishedAt desc) {
     _id,
     title,
@@ -75,8 +67,8 @@ export const articlesBySubcategoryQuery = `
   }
 `
 
-// Get articles by tag
-export const articlesByTagQuery = `
+// Articles by tag
+export const articlesByTagQuery = groq`
   *[_type == "article" && category == "hospitality" && "hospitality" in sites && $tag in tags] | order(publishedAt desc) {
     _id,
     title,
@@ -97,19 +89,15 @@ export const articlesByTagQuery = `
   }
 `
 
-// Get related articles by subcategory
-export const relatedArticlesQuery = `
-  *[_type == "article" 
-    && category == "hospitality" 
-    && "hospitality" in sites 
-    && subcategory == $subcategory 
-    && slug.current != $currentSlug
-  ] | order(publishedAt desc)[0...3] {
+// Related articles by subcategory (excludes current article)
+export const relatedArticlesQuery = groq`
+  *[_type == "article" && category == "hospitality" && "hospitality" in sites && subcategory == $subcategory && slug.current != $currentSlug] | order(publishedAt desc)[0...3] {
     _id,
     title,
     slug,
     mainImage {
       asset -> {
+        _id,
         url
       },
       alt
@@ -117,18 +105,15 @@ export const relatedArticlesQuery = `
   }
 `
 
-// Fallback: Get related articles by category
-export const relatedArticlesByCategoryQuery = `
-  *[_type == "article" 
-    && category == "hospitality" 
-    && "hospitality" in sites 
-    && slug.current != $currentSlug
-  ] | order(publishedAt desc)[0...3] {
+// Fallback related articles by category (excludes current article)
+export const relatedArticlesByCategoryQuery = groq`
+  *[_type == "article" && category == "hospitality" && "hospitality" in sites && slug.current != $currentSlug] | order(publishedAt desc)[0...3] {
     _id,
     title,
     slug,
     mainImage {
       asset -> {
+        _id,
         url
       },
       alt
