@@ -1,0 +1,79 @@
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.featuredColumn {
+  width: 100%;
+}
+
+.subFeaturedColumn {
+  width: 100%;
+}
+
+/* ===========================================
+   MORE BUTTON
+   =========================================== */
+
+.moreButtonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+.moreButton {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
+  padding: 12px 40px;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.moreButton:hover {
+  background-color: #00171f;
+  color: #ffffff;
+  border-color: #00171f;
+}
+
+/* ===========================================
+   DESKTOP STYLES
+   =========================================== */
+
+@media (min-width: 768px) {
+  .main {
+    padding: 50px 40px;
+  }
+
+  .heroSection {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .featuredColumn {
+    width: 55%;
+  }
+
+  .subFeaturedColumn {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 60px;
+  }
+}

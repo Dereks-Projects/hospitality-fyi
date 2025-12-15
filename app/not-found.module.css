@@ -1,0 +1,144 @@
+.container {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  padding: 40px 20px;
+}
+
+.content {
+  max-width: 500px;
+  text-align: center;
+}
+
+.errorCode {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+  color: #00171f;
+  line-height: 1;
+  margin: 0 0 8px 0;
+}
+
+.title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #00171f;
+  margin: 0 0 16px 0;
+}
+
+.message {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+/* ===========================================
+   NAVIGATION BUTTONS
+   =========================================== */
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.primaryButton {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #00171f;
+  background-color: #ffde59;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.primaryButton:hover {
+  opacity: 0.9;
+}
+
+.secondaryButton {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.secondaryButton:hover {
+  background-color: #00171f;
+  color: #ffffff;
+  border-color: #00171f;
+}
+
+/* ===========================================
+   HELP SECTION
+   =========================================== */
+
+.helpSection {
+  padding-top: 32px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.helpText {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 16px 0;
+}
+
+.helpLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.helpLinks li a {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: #00171f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.helpLinks li a:hover {
+  color: #ffde59;
+}
+
+/* ===========================================
+   DESKTOP STYLES
+   =========================================== */
+
+@media (min-width: 768px) {
+  .errorCode {
+    font-size: 140px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .message {
+    font-size: 17px;
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,135 @@
+/* ===========================================
+   LEGAL PAGES - SHARED STYLES (MOBILE)
+   Used by: Privacy, Terms, Cookies, Disclaimer
+   =========================================== */
+
+.pageContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentWrapper {
+  flex: 1;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-color: #fafafa;
+}
+
+.section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #00171f;
+  margin: 0 0 8px 0;
+}
+
+.lastUpdated {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 32px 0;
+}
+
+.content {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.content p {
+  margin: 0 0 20px 0;
+}
+
+.content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #00171f;
+  margin: 40px 0 16px 0;
+}
+
+.content h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #00171f;
+  margin: 28px 0 12px 0;
+}
+
+.content ul {
+  margin: 0 0 20px 0;
+  padding-left: 24px;
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+
+.content li strong {
+  color: #00171f;
+}
+
+.content a {
+  color: #ffde59;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.content a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.navigationLinks {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 24px;
+}
+
+.navLink {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffde59;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.navLink:hover {
+  opacity: 0.8;
+}
+
+/* ===========================================
+   DESKTOP STYLES (min-width: 768px)
+   =========================================== */
+
+@media (min-width: 768px) {
+  .contentWrapper {
+    padding-top: 90px;
+    padding-bottom: 120px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+
+  .content h2 {
+    font-size: 24px;
+  }
+
+  .content h3 {
+    font-size: 18px;
+  }
+}

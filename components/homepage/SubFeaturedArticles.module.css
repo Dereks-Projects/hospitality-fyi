@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageLink {
+  display: block;
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imageLink:hover .image {
+  transform: scale(1.02);
+}
+
+.subcategory {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: #00171f;
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.content {
+  padding: 12px 0 0 0;
+}
+
+.title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.3;
+  margin: 0 0 6px 0;
+  transition: color 0.2s ease;
+}
+
+.title:hover {
+  color: #00171f;
+}
+
+.subtitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.readMore {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #00171f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.readMore:hover {
+  color: #ffde59;
+}
+
+/* ===========================================
+   DESKTOP STYLES
+   =========================================== */
+
+@media (min-width: 768px) {
+  .container {
+    gap: 20px;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 1;
+  }
+
+  .image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .title {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .readMore {
+    font-size: 14px;
+  }
+}
