@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { client } from '@/sanity/lib/client'
-import { articlesByTagQuery } from '@/sanity/queries'
 import ArticleCard from '@/components/homepage/ArticleCard'
 import styles from '../../articles.module.css'
 
@@ -39,9 +38,27 @@ export default async function TagPage({ params }: TagPageProps) {
   const queryTag = toQueryFormat(tag)
   const displayName = toDisplayName(tag)
 
-  const articles = await client.fetch(articlesByTagQuery, {
-    tag: queryTag,
-  })
+  const articles = await client.fetch(
+    `*[_type == "article" && category == "hospitality" && "hospitality" in sites && $tag in tags] | order(publishedAt desc) {
+      _id,
+      title,
+      subtitle,
+      slug,
+      mainImage {
+        asset -> {
+          _id,
+          url
+        },
+        alt
+      },
+      subcategory,
+      category,
+      tags,
+      publishedAt,
+      author
+    }`,
+    { tag: queryTag }
+  )
 
   if (!articles || articles.length === 0) {
     notFound()
