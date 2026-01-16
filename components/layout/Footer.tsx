@@ -23,7 +23,7 @@ export default function Footer() {
 
         <div className={styles.socialIcons}>
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/hospitality.fyi/" 
             target="_blank" 
             rel="noopener noreferrer"
             className={styles.iconLink}
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <p className={styles.copyright}>
-          Copyright 2025 - Hospitality.fyi - All Rights Reserved
+          Copyright 2026 - Hospitality.fyi - All Rights Reserved
         </p>
 
         <Link href="#top" className={styles.backToTop}>

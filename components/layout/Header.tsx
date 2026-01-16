@@ -87,7 +87,7 @@ export default function Header() {
 
           <div className={styles.socialLinks}>
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/hospitality.fyi/" 
               target="_blank" 
               rel="noopener noreferrer"
               className={styles.socialIcon}
