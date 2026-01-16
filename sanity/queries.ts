@@ -36,7 +36,16 @@ export const articleBySlugQuery = groq`
       },
       alt
     },
-    body,
+    body[]{
+      ...,
+      _type == "image" => {
+        ...,
+        asset->{
+          _id,
+          url
+        }
+      }
+    },
     subcategory,
     category,
     tags,
