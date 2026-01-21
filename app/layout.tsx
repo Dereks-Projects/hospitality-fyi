@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: "Hospitality.fyi | Hospitality Industry Insights",
   description: "Deep-dive articles on hospitality, service excellence, and the hotel and restaurant industry.",
   metadataBase: new URL('https://hospitality.fyi'),
+  verification: {
+    google: 'pvcgxbFN5C8r_wz1X-dCb4Jm0hwORswJriiSTMr2vHs',
+  },
   icons: {
     icon: '/hospitality-favicon.png',
   },
