@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Source_Sans_3 } from "next/font/google";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
-const sourceSans = Source_Sans_3({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-source-sans",
+  weight: ["400", "500", "700"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -67,7 +67,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={sourceSans.variable}>
+      <body className={inter.variable}>
         <Header />
         <main>{children}</main>
         <Footer />

@@ -1,10 +1,9 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
 import styles from './about.module.css'
 
 export const metadata: Metadata = {
   title: 'About Us | HOSPITALITY.FYI',
-  description: 'Learn about HOSPITALITY.FYI, our mission to elevate hospitality education, and the creator behind the platform.',
+  description: 'Learn about HOSPITALITY.FYI, our mission to elevate hospitality education, and the company behind the platform.',
   alternates: {
     canonical: 'https://hospitality.fyi/about',
   },
@@ -13,14 +12,14 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className={styles.pageContainer}>
-      
+
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>About Us</h1>
           <p className={styles.heroSubtitle}>
-            HOSPITALITY.FYI is a digital magazine dedicated to hospitality excellence — bringing you 
-            the insights, standards, and stories that define world-class service. 
+            HOSPITALITY.FYI is a digital magazine dedicated to hospitality excellence — bringing 
+            you the insights, standards, and stories that define world-class service. 
             No memberships. No paywalls. Just quality knowledge, freely accessible.
           </p>
         </div>
@@ -31,56 +30,49 @@ export default function AboutPage() {
         <div className={styles.sectionContent}>
           <h2 className={styles.sectionTitle}>Our Mission</h2>
           <p className={styles.missionText}>
-            The hospitality industry is built on <span className={styles.highlight}>extraordinary experiences</span> — 
-            moments crafted by professionals who understand that true service goes far beyond taking orders 
-            and delivering plates. From the Michelin-starred restaurants redefining dining to the luxury 
-            hotels where every detail matters, hospitality is an art form practiced by dedicated 
-            individuals who rarely receive the recognition they deserve.
-          </p>
-          <p className={styles.missionText}>
-            We believe that <span className={styles.highlight}>hospitality knowledge should be accessible to everyone</span>. 
-            Whether you're a front-line team member aspiring to grow, a manager seeking to elevate your 
-            operation, or an enthusiast who appreciates the craft behind exceptional service — you deserve 
-            access to quality education without barriers, gatekeepers, or expensive certification programs.
-          </p>
-          <p className={styles.missionText}>
-            HOSPITALITY.FYI exists to <span className={styles.highlight}>democratize hospitality excellence</span>. We 
-            explore what separates good service from unforgettable experiences, examine the rating systems 
-            that define industry standards, profile the leaders shaping our field, and provide actionable 
-            insights that help hospitality professionals thrive. From Forbes Travel Guide standards to 
-            James Beard recognition, we bring you the knowledge that matters — no strings attached.
+            Great hospitality education shouldn't be locked behind expensive certifications or 
+            scattered across countless sources that demand your email before offering a single 
+            insight. HOSPITALITY.FYI exists to{' '}
+            <span className={styles.highlight}>democratize hospitality excellence</span> — 
+            presenting the standards, stories, and strategies that define world-class service 
+            for professionals and enthusiasts alike. From Forbes Travel Guide standards to 
+            Michelin-starred dining rooms, we bring you the knowledge that matters — no 
+            strings attached.
           </p>
         </div>
       </section>
 
-      {/* About the Creator Section */}
-      <section className={styles.creatorSection}>
+      {/* About Informative Media Section */}
+      <section className={styles.companySection}>
         <div className={styles.sectionContent}>
-          <h2 className={styles.sectionTitle}>About the Creator</h2>
+          <h2 className={styles.sectionTitle}>About Informative Media</h2>
           <p className={styles.sectionText}>
-            HOSPITALITY.FYI was created by{' '}
-            <a href="https://www.derekengles.com" target="_blank" rel="noopener noreferrer" className={styles.creatorLink}>
-              Derek Engles
-            </a>
-            , a hospitality professional with over two decades of 
-            experience in luxury service. After years working as a sommelier and wine director 
-            at properties including Wynn Resort and MGM Grand — serving over 200,000 guests — Derek 
-            transitioned into technology development, combining deep industry knowledge with modern 
-            platforms to build educational resources that make a real impact in the hospitality space.
+            HOSPITALITY.FYI is part of Informative Media, a hospitality education company operating a 
+            portfolio of digital platforms dedicated to beverage knowledge and service excellence. 
+            From wine and spirits to fine dining standards, our platforms serve professionals and 
+            enthusiasts who believe that quality education should be accessible to everyone. 
+            We combine over two decades of luxury hospitality experience with modern technology 
+            to create content that makes a real impact.
           </p>
+          <a
+            href="https://informativemedia.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.companyLink}
+          >
+            Learn more about Informative Media →
+          </a>
         </div>
       </section>
 
       {/* Let's Collaborate Section */}
       <section className={styles.collaborateSection}>
         <div className={styles.collaborateContent}>
-          <h2 className={styles.collaborateTitle}>Let's Collaborate</h2>
+          <h2 className={styles.collaborateTitle}>Let&#39;s Collaborate</h2>
           <p className={styles.collaborateText}>
-            Whether you're a hospitality brand looking to share your story, a hotel or restaurant group 
-            seeking to elevate your team's knowledge, or an organization that wants to connect with 
-            professionals who care about service excellence — we'd love to hear from you. We partner 
-            with brands and businesses to create educational content that develops your team and 
-            positions your brand in front of an audience that values quality and craft.
+            Whether you're a hospitality brand looking to share your story, a hotel or restaurant 
+            group seeking to elevate your team's knowledge, or an organization that wants to 
+            connect with professionals who care about service excellence — we'd love to hear from you.
           </p>
           <a href="mailto:derekengles@gmail.com" className={styles.contactLink}>
             Get in Touch

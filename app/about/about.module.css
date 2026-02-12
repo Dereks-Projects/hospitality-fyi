@@ -1,7 +1,9 @@
 /* ===========================================
    ABOUT PAGE STYLES (MOBILE)
+   Location: app/about/about.module.css
    =========================================== */
 
+/* Page wrapper */
 .pageContainer {
   min-height: 100vh;
   display: flex;
@@ -13,7 +15,7 @@
    =========================================== */
 
 .hero {
-  background: linear-gradient(to bottom, #00171f, #012a36);
+  background: linear-gradient(to bottom, #001015, #2a2a2a);
   padding: 140px 20px 60px 20px;
   text-align: center;
 }
@@ -24,7 +26,7 @@
 }
 
 .heroTitle {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #ffffff;
@@ -33,7 +35,7 @@
 }
 
 .heroSubtitle {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #ffffff;
@@ -52,7 +54,7 @@
 }
 
 .sectionTitle {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #00171f;
@@ -60,7 +62,7 @@
 }
 
 .sectionText {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #374151;
@@ -82,7 +84,7 @@
 }
 
 .missionText {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #374151;
@@ -100,23 +102,27 @@
 }
 
 /* ===========================================
-   CREATOR SECTION (MOBILE)
+   COMPANY SECTION (MOBILE)
    =========================================== */
 
-.creatorSection {
+.companySection {
   padding: 50px 20px;
   background-color: #fafafa;
 }
 
-.creatorLink {
+.companyLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
   color: #00171f;
-  font-weight: 600;
-  text-decoration: underline;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  border-bottom: 1px solid #00171f;
+  padding-bottom: 1px;
+  transition: opacity 0.2s ease;
 }
 
-.creatorLink:hover {
-  color: #ffde59;
+.companyLink:hover {
+  opacity: 0.7;
 }
 
 /* ===========================================
@@ -135,7 +141,7 @@
 }
 
 .collaborateTitle {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #00171f;
@@ -143,7 +149,7 @@
 }
 
 .collaborateText {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #374151;
@@ -153,7 +159,7 @@
 
 .contactLink {
   display: inline-block;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #00171f;
@@ -186,7 +192,7 @@
   }
 
   .missionSection,
-  .creatorSection {
+  .companySection {
     padding: 60px 20px;
   }
 
