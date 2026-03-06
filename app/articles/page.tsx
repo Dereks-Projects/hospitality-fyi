@@ -6,6 +6,7 @@ import ArticleCard from '@/components/homepage/ArticleCard'
 import SubcategoryDropdown from '@/components/homepage/SubcategoryDropdown'
 import styles from './articles.module.css'
 
+
 const ARTICLES_PER_PAGE = 12
 
 export const metadata: Metadata = {

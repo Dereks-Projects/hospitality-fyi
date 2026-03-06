@@ -118,16 +118,7 @@ export default function Header() {
               <div className={styles.portfolioSiteDesc}>Online Magazine</div>
             </a>
 
-            <a
-              href="https://backbar.fyi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.portfolioItem}
-              onClick={closeAll}
-            >
-              <div className={styles.portfolioSiteName}>Backbar.fyi</div>
-              <div className={styles.portfolioSiteDesc}>Online Magazine</div>
-            </a>
+            
           </div>
 
           {/* Divider */}
@@ -162,7 +153,7 @@ export default function Header() {
               Home
             </Link>
             <Link href="/articles" className={styles.navLink} onClick={closeAll}>
-              Articles
+              Article Collection
             </Link>
             <Link href="/about" className={styles.navLink} onClick={closeAll}>
               About Us
