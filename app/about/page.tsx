@@ -74,7 +74,7 @@ export default function AboutPage() {
             group seeking to elevate your team's knowledge, or an organization that wants to 
             connect with professionals who care about service excellence — we'd love to hear from you.
           </p>
-          <a href="mailto:derekengles@gmail.com" className={styles.contactLink}>
+          <a href="mailto:derek@informativemedia.com" className={styles.contactLink}>
             Get in Touch
           </a>
         </div>

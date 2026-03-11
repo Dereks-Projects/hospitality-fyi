@@ -273,3 +273,18 @@
     font-size: 28px;
   }
 }
+
+/* ===========================================
+   LARGE DESKTOP IMAGE STYLES
+   Make article images ~20% wider than text
+   on desktop only
+   =========================================== */
+
+@media (min-width: 1024px) {
+  .mainImageWrapper,
+  .bodyImage {
+    width: 120%;
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+}
