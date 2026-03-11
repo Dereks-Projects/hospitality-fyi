@@ -34,7 +34,7 @@ export default function Footer() {
             </svg>
           </a>
           <a 
-            href="mailto:derekengles@gmail.com"
+            href="mailto:derek@informativemedia.com"
             className={styles.iconLink}
             aria-label="Send us an email"
           >

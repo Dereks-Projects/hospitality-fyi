@@ -249,5 +249,5 @@ Proprietary. All rights reserved.
 ## Contact
 
 **Derek Engles**  
-[derekengles@gmail.com](mailto:derekengles@gmail.com)  
+[derek@informativemedia.com](mailto:derek@informativemedia.com)  
 [derekengles.com](https://www.derekengles.com)
