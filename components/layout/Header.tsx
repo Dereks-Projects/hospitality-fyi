@@ -155,8 +155,11 @@ export default function Header() {
             <Link href="/articles" className={styles.navLink} onClick={closeAll}>
               Article Collection
             </Link>
+            <Link href="/courses/mastering-guest-service" className={styles.navLink} onClick={closeAll}>
+              Mastering Guest Service
+            </Link>
             <Link href="/about" className={styles.navLink} onClick={closeAll}>
-              About Us
+              About Hospitality.fyi
             </Link>
             <a
               href="mailto:derek@informativemedia.com"

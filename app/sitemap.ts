@@ -60,6 +60,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
+  // Course pages
+  const courseSlugs = [
+    'the-first-10-seconds',
+    'reading-the-room',
+    'the-language-of-service',
+    'when-things-go-wrong',
+    'building-a-service-culture',
+  ]
+
+  const coursePages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/courses/mastering-guest-service`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    ...courseSlugs.map((slug) => ({
+      url: `${baseUrl}/courses/mastering-guest-service/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+  ]
+
   // Article pages
   const articlePages: MetadataRoute.Sitemap = articles.map((article: any) => ({
     url: `${baseUrl}/articles/${article.slug}`,
@@ -93,5 +117,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }))
 
-  return [...staticPages, ...articlePages, ...subcategoryPages, ...tagPages]
+  return [...staticPages, ...coursePages, ...articlePages, ...subcategoryPages, ...tagPages]
 }

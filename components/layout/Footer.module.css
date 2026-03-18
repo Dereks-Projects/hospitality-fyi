@@ -42,6 +42,25 @@
 }
 
 /* ===========================================
+   COURSE PROMO LINK
+   =========================================== */
+
+.coursePromo {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: text-decoration 0.2s ease, color 0.2s ease;
+}
+
+.coursePromo:hover {
+  text-decoration: underline;
+  color: #ffde59;
+}
+
+/* ===========================================
    SOCIAL ICONS (MOBILE)
    =========================================== */
 

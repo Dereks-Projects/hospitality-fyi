@@ -21,6 +21,10 @@ export default function Footer() {
           </div>
         </nav>
 
+        <Link href="/courses/mastering-guest-service" className={styles.coursePromo}>
+          Visit Mastering Guest Service here →
+        </Link>
+
         <div className={styles.socialIcons}>
           <a 
             href="https://www.instagram.com/hospitality.fyi/" 
@@ -49,7 +53,7 @@ export default function Footer() {
         </div>
 
         <p className={styles.copyright}>
-          Copyright 2026 - Hospitality.fyi - All Rights Reserved
+          Copyright 2026 - Informative Media - All Rights Reserved
         </p>
 
         <Link href="#top" className={styles.backToTop}>

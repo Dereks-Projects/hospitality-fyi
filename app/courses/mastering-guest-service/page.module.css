@@ -1,0 +1,233 @@
+.page {
+  background-color: #fafafa;
+  padding-bottom: 60px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* ===========================================
+   BREADCRUMBS
+   =========================================== */
+
+.breadcrumbs {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.breadcrumbs a {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+  color: #00171f;
+}
+
+.separator {
+  margin: 0 8px;
+  color: #9ca3af;
+}
+
+/* ===========================================
+   HERO
+   =========================================== */
+
+.hero {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===========================================
+   CALLOUT BOX
+   =========================================== */
+
+.callout {
+  border-left: 4px solid #ffcc00;
+  background-color: #f3f4f6;
+  border-radius: 0 4px 4px 0;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.calloutHeading {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+}
+
+.calloutBody {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===========================================
+   META ROW
+   =========================================== */
+
+.meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 40px;
+}
+
+.metaItem {
+  color: #6b7280;
+}
+
+.metaDot {
+  margin: 0 4px;
+  color: #9ca3af;
+}
+
+/* ===========================================
+   COURSE CARDS
+   =========================================== */
+
+.courseList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.courseCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.courseCard:hover {
+  border-color: #ffcc00;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.courseNumber {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fdfdfd;
+  background-color: #ffcc00;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.courseContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.courseTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.3;
+  margin: 0 0 4px 0;
+}
+
+.courseSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #464646;
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+}
+
+.courseDescription {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+}
+
+.courseDuration {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ===========================================
+   BACK LINK
+   =========================================== */
+
+.backLink {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.backLink a {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #00171f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backLink a:hover {
+  color: #ffcc00;
+}
+
+/* ===========================================
+   DESKTOP STYLES
+   =========================================== */
+
+@media (min-width: 768px) {
+  .container {
+    padding: 50px 40px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+}

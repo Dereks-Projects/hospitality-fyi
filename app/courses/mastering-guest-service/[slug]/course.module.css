@@ -1,0 +1,316 @@
+.course {
+  background-color: #fafafa;
+  padding-bottom: 60px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* ===========================================
+   BACK TO COURSE LINK
+   =========================================== */
+
+.backToCourse {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.backToCourse:hover {
+  color: #00171f;
+}
+
+/* ===========================================
+   CLASS COUNTER AND HEADER
+   =========================================== */
+
+.classCounter {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffcc00;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-style: italic;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+.duration {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #9ca3af;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+/* ===========================================
+   DESCRIPTION
+   =========================================== */
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0 0 32px 0;
+}
+
+/* ===========================================
+   CALLOUT BOX
+   =========================================== */
+
+.callout {
+  border-left: 4px solid #ffcc00;
+  background-color: #f3f4f6;
+  border-radius: 0 4px 4px 0;
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.calloutHeading {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+}
+
+.calloutBody {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===========================================
+   CONTENT SECTIONS
+   =========================================== */
+
+.section {
+  margin-bottom: 36px;
+}
+
+.sectionHeading {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.3;
+  margin: 0 0 16px 0;
+}
+
+.paragraph {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  color: #1f2937;
+  line-height: 1.8;
+  margin: 0 0 20px 0;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* ===========================================
+   IN-CONTENT IMAGES
+   =========================================== */
+
+.imageWrapper {
+  margin: 36px 0;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* ===========================================
+   KEY TAKEAWAYS
+   =========================================== */
+
+.takeaways {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 40px 0;
+}
+
+.takeawaysTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 16px 0;
+}
+
+.takeawaysList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.takeawayItem {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #1f2937;
+  line-height: 1.6;
+  padding-left: 28px;
+  position: relative;
+}
+
+.takeawayItem::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #ffcc00;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* ===========================================
+   CLOSING QUOTE
+   =========================================== */
+
+.closingQuote {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  color: #ffcc00;
+  text-align: center;
+  line-height: 1.5;
+  margin: 48px 0;
+  padding: 0 16px;
+}
+
+/* ===========================================
+   PREV / NEXT NAVIGATION
+   =========================================== */
+
+.courseNav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.navPrev,
+.navNext {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+  max-width: 48%;
+}
+
+.navPrev:hover,
+.navNext:hover {
+  border-color: #ffcc00;
+}
+
+.navPrev {
+  align-items: flex-start;
+}
+
+.navNext {
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.navLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffcc00;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.navTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #00171f;
+}
+
+/* ===========================================
+   DESKTOP STYLES
+   =========================================== */
+
+@media (min-width: 768px) {
+  .container {
+    padding: 50px 40px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .sectionHeading {
+    font-size: 28px;
+  }
+
+  .paragraph {
+    font-size: 18px;
+  }
+
+  .closingQuote {
+    font-size: 22px;
+    padding: 0 32px;
+  }
+}
+
+/* ===========================================
+   LARGE DESKTOP IMAGE STYLES
+   Match article page pattern
+   =========================================== */
+
+@media (min-width: 1024px) {
+  .imageWrapper {
+    width: 120%;
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+}
