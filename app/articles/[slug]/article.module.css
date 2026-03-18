@@ -180,6 +180,130 @@
 }
 
 /* ===========================================
+   INTERNAL ARTICLE LINKS -- Inline body links
+   =========================================== */
+
+.internalLink {
+  color: #00171f;
+  text-decoration: underline;
+  text-decoration-color: #ffde59;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.internalLink:hover {
+  color: #ffde59;
+}
+
+/* ===========================================
+   RELATED READING BOX -- Hand-picked links
+   =========================================== */
+
+.relatedReading {
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  padding: 24px;
+  margin: 32px 0;
+}
+
+.relatedReadingTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.relatedReadingList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.relatedReadingLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  color: #00171f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.relatedReadingLink:hover {
+  color: #ffde59;
+  text-decoration: underline;
+}
+
+/* ===========================================
+   FAQ ACCORDION -- Click to expand Q&A pairs
+   =========================================== */
+
+.faqSection {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.faqTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 24px 0;
+}
+
+.faqItem {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faqItem:last-child {
+  border-bottom: none;
+}
+
+.faqQuestion {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+  padding: 16px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqQuestion::-webkit-details-marker {
+  display: none;
+}
+
+.faqQuestion::after {
+  content: '+';
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #6b7280;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.faqItem[open] .faqQuestion::after {
+  content: '-';
+}
+
+.faqAnswer {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #6b7280;
+  margin: 0;
+  padding: 0 0 16px 0;
+}
+
+/* ===========================================
    TAGS
    =========================================== */
 

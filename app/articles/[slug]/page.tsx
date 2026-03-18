@@ -87,6 +87,24 @@ const portableTextComponents = {
         {children}
       </a>
     ),
+    internalLink: ({
+      value,
+      children,
+    }: {
+      value?: { slug?: string; docType?: string }
+      children: React.ReactNode
+    }) => {
+      if (!value?.slug) return <>{children}</>
+      const href =
+        value.docType === 'studyGuide'
+          ? `/study-guides/${value.slug}`
+          : `/articles/${value.slug}`
+      return (
+        <Link href={href} className={styles.internalLink}>
+          {children}
+        </Link>
+      )
+    },
   },
 }
 
@@ -98,7 +116,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound()
   }
 
-  // Fetch related articles
+  // Fetch related articles (auto-pulled by subcategory for bottom cards)
   let relatedArticles = await client.fetch(relatedArticlesQuery, {
     subcategory: article.subcategory,
     currentSlug: slug,
@@ -110,6 +128,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       currentSlug: slug,
     })
   }
+
+  // Split body at first image for Related Reading box placement
+  const firstImageIndex = article.body?.findIndex((block: any) => block._type === 'image') ?? -1
+  const bodyBeforeRelated = firstImageIndex >= 0 ? article.body?.slice(0, firstImageIndex + 1) : article.body
+  const bodyAfterRelated = firstImageIndex >= 0 ? article.body?.slice(firstImageIndex + 1) : []
+  const hasRelatedReading = article.relatedArticles && article.relatedArticles.length > 0
 
   // Format date
   const formattedDate = article.publishedAt
@@ -186,6 +210,22 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     ],
   }
 
+  // FAQ JSON-LD for Google rich results
+  const faqJsonLd = article.faq && article.faq.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: article.faq.map((item: { question: string; answer: string }) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      }
+    : null
+
   return (
     <>
       <script
@@ -196,6 +236,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       <article className={styles.article}>
         <div className={styles.container}>
@@ -236,9 +282,30 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </figure>
           )}
 
-          {/* Article Body */}
+          {/* Article Body with Related Reading box after first image */}
           <div className={styles.body}>
-            <PortableText value={article.body} components={portableTextComponents} />
+            {bodyBeforeRelated && (
+              <PortableText value={bodyBeforeRelated} components={portableTextComponents} />
+            )}
+
+            {hasRelatedReading && (
+              <aside className={styles.relatedReading}>
+                <h3 className={styles.relatedReadingTitle}>Related Reading</h3>
+                <ul className={styles.relatedReadingList}>
+                  {article.relatedArticles?.map((item: { _id: string; title: string; slug: string }) => (
+                    <li key={item._id}>
+                      <Link href={`/articles/${item.slug}`} className={styles.relatedReadingLink}>
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
+            )}
+
+            {bodyAfterRelated && bodyAfterRelated.length > 0 && (
+              <PortableText value={bodyAfterRelated} components={portableTextComponents} />
+            )}
           </div>
 
           {/* Tags */}
@@ -259,7 +326,20 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </div>
           )}
 
-          {/* Related Articles */}
+          {/* FAQ Accordion */}
+          {article.faq && article.faq.length > 0 && (
+            <section className={styles.faqSection}>
+              <h2 className={styles.faqTitle}>Frequently Asked Questions</h2>
+              {article.faq.map((item: { question: string; answer: string }, index: number) => (
+                <details key={index} className={styles.faqItem}>
+                  <summary className={styles.faqQuestion}>{item.question}</summary>
+                  <p className={styles.faqAnswer}>{item.answer}</p>
+                </details>
+              ))}
+            </section>
+          )}
+
+          {/* Related Articles (auto-pulled by subcategory, do not remove) */}
           {relatedArticles && relatedArticles.length > 0 && (
             <RelatedArticles articles={relatedArticles} />
           )}

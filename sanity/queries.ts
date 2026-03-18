@@ -44,13 +44,30 @@ export const articleBySlugQuery = groq`
           _id,
           url
         }
+      },
+      markDefs[]{
+        ...,
+        _type == "internalLink" => {
+          ...,
+          "slug": reference->slug.current,
+          "docType": reference->_type
+        }
       }
     },
     subcategory,
     category,
     tags,
     publishedAt,
-    author
+    author,
+    relatedArticles[]->{
+      _id,
+      title,
+      "slug": slug.current
+    },
+    faq[]{
+      question,
+      answer
+    }
   }
 `
 
