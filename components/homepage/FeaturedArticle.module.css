@@ -34,7 +34,7 @@
   left: 12px;
   background-color: #00171f;
   color: #ffffff;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
@@ -48,7 +48,7 @@
 }
 
 .title {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #000000;
@@ -62,7 +62,7 @@
 }
 
 .subtitle {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-style: italic;
   color: #4b5563;
@@ -72,7 +72,7 @@
 
 .excerpt {
   display: none;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   color: #374151;
   line-height: 1.6;
@@ -80,7 +80,7 @@
 }
 
 .readMore {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #00171f;
