@@ -6,6 +6,7 @@ import { allArticlesQuery } from '@/sanity/queries'
 import ArticleCard from '@/components/homepage/ArticleCard'
 import SubcategoryDropdown from '@/components/homepage/SubcategoryDropdown'
 import styles from '../../articles.module.css'
+import ProjectCTA from '@/components/layout/ProjectCTA'
 
 const ARTICLES_PER_PAGE = 12
 

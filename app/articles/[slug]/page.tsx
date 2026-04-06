@@ -5,6 +5,7 @@ import { PortableText } from '@portabletext/react'
 import { client } from '@/sanity/lib/client'
 import { articleBySlugQuery, relatedArticlesQuery, relatedArticlesByCategoryQuery } from '@/sanity/queries'
 import RelatedArticles from '@/components/article/RelatedArticles'
+import ProjectCTA from '@/components/layout/ProjectCTA'
 import styles from './article.module.css'
 
 interface ArticlePageProps {
@@ -308,6 +309,19 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             )}
           </div>
 
+          {/* FAQ Accordion */}
+          {article.faq && article.faq.length > 0 && (
+            <section className={styles.faqSection}>
+              <h2 className={styles.faqTitle}>Frequently Asked Questions</h2>
+              {article.faq.map((item: { question: string; answer: string }, index: number) => (
+                <details key={index} className={styles.faqItem}>
+                  <summary className={styles.faqQuestion}>{item.question}</summary>
+                  <p className={styles.faqAnswer}>{item.answer}</p>
+                </details>
+              ))}
+            </section>
+          )}
+
           {/* Tags */}
           {article.tags && article.tags.length > 0 && (
             <div className={styles.tagsSection}>
@@ -326,18 +340,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </div>
           )}
 
-          {/* FAQ Accordion */}
-          {article.faq && article.faq.length > 0 && (
-            <section className={styles.faqSection}>
-              <h2 className={styles.faqTitle}>Frequently Asked Questions</h2>
-              {article.faq.map((item: { question: string; answer: string }, index: number) => (
-                <details key={index} className={styles.faqItem}>
-                  <summary className={styles.faqQuestion}>{item.question}</summary>
-                  <p className={styles.faqAnswer}>{item.answer}</p>
-                </details>
-              ))}
-            </section>
-          )}
+
 
           {/* Related Articles (auto-pulled by subcategory, do not remove) */}
           {relatedArticles && relatedArticles.length > 0 && (
@@ -350,6 +353,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
         </div>
       </article>
+
+      <ProjectCTA />
     </>
   )
 }

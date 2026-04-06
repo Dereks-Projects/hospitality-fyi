@@ -186,13 +186,14 @@
 .internalLink {
   color: #00171f;
   text-decoration: underline;
-  text-decoration-color: #ffde59;
+  text-decoration-color: #9ca3af;
   text-underline-offset: 2px;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .internalLink:hover {
-  color: #ffde59;
+  color: #374151;
+  text-decoration-color: #374151;
 }
 
 /* ===========================================
@@ -228,13 +229,14 @@
 .relatedReadingLink {
   font-family: 'Inter', sans-serif;
   font-size: 0.9375rem;
+  font-weight: 500;
   color: #00171f;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .relatedReadingLink:hover {
-  color: #ffde59;
+  color: #2e2e2e;
   text-decoration: underline;
 }
 

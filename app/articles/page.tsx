@@ -4,6 +4,7 @@ import { client } from '@/sanity/lib/client'
 import { allArticlesQuery } from '@/sanity/queries'
 import ArticleCard from '@/components/homepage/ArticleCard'
 import SubcategoryDropdown from '@/components/homepage/SubcategoryDropdown'
+import ProjectCTA from '@/components/layout/ProjectCTA'
 import styles from './articles.module.css'
 
 
@@ -31,32 +32,35 @@ export default async function ArticlesPage() {
   )] as string[]
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1 className={styles.title}>Article Collection</h1>
-        <SubcategoryDropdown subcategories={subcategories} />
-      </header>
+    <>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <h1 className={styles.title}>Article Collection</h1>
+          <SubcategoryDropdown subcategories={subcategories} />
+        </header>
 
-      <div className={styles.grid}>
-        {articles.map((article: {
-          _id: string
-          title: string
-          subtitle?: string
-          slug: { current: string }
-          mainImage?: { asset: { url: string }; alt?: string }
-          subcategory?: string
-        }) => (
-          <ArticleCard key={article._id} article={article} />
-        ))}
+        <div className={styles.grid}>
+          {articles.map((article: {
+            _id: string
+            title: string
+            subtitle?: string
+            slug: { current: string }
+            mainImage?: { asset: { url: string }; alt?: string }
+            subcategory?: string
+          }) => (
+            <ArticleCard key={article._id} article={article} />
+          ))}
+        </div>
+
+        {totalPages > 1 && (
+          <footer className={styles.pageFooter}>
+            <Link href="/articles/page/2" className={styles.nextButton}>
+              More Articles →
+            </Link>
+          </footer>
+        )}
       </div>
-
-      {totalPages > 1 && (
-        <footer className={styles.pageFooter}>
-          <Link href="/articles/page/2" className={styles.nextButton}>
-            More Articles →
-          </Link>
-        </footer>
-      )}
-    </div>
+      <ProjectCTA />
+    </>
   )
 }

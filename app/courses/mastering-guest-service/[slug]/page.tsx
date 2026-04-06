@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import ProjectCTA from '@/components/layout/ProjectCTA'
 import styles from './course.module.css'
 
 import course1 from '@/data/courses/mastering-guest-service/the-first-10-seconds.json'
@@ -246,6 +247,8 @@ export default async function CoursePage({ params }: CoursePageProps) {
           </nav>
         </div>
       </article>
+
+      <ProjectCTA />
     </>
   )
 }

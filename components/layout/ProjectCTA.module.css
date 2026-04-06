@@ -1,0 +1,71 @@
+.ctaBanner {
+  background-color: #00171f;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ctaHook {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffde59;
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ctaMessage {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.ctaButton {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.45rem 1.25rem;
+  background-color: transparent;
+  color: #ffde59;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border: 1px solid #ffde59;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #ffde59;
+  color: #00171f;
+}
+
+@media (min-width: 768px) {
+  .ctaBanner {
+    padding: 2rem 1.5rem;
+  }
+
+  .ctaHook {
+    font-size: 1.1rem;
+  }
+
+  .ctaMessage {
+    font-size: 1.1rem;
+  }
+
+  .ctaButton {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
